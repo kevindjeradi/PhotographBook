@@ -1,0 +1,118 @@
+/* src/styles/Gallery.css */
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+}
+
+/* Thumbnail Styling */
+.thumbnail {
+    overflow: hidden;
+    background-color: black;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.thumbnail img,
+.thumbnail .MuiCardMedia-root {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.thumbnail:hover .MuiCardMedia-root {
+    transform: scale(1.1);
+}
+
+.thumbnail:hover .image-title {
+    opacity: 1;
+}
+
+.image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Image viewer styling when an image is clicked */
+.image-viewer {
+    position: fixed;
+    top: 60px;  
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);  
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 80%; 
+    height: 80%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-viewer img {
+    max-width: 100%;
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+.image-viewer .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    color: black;
+}
+
+.image-viewer button.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: dimgray;
+    border: none;
+    cursor: pointer;
+}
+
+.image-viewer button.arrow:hover{
+    color: black;
+    transition: color 0.3s;
+
+}
+
+.image-viewer button.arrow.left {
+    left: 50px;
+}
+
+.image-viewer button.arrow.right {
+    right: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    .image-viewer button.arrow.left {
+        left: 0;
+    }
+    
+    .image-viewer button.arrow.right {
+        right: 0;
+    }
+}

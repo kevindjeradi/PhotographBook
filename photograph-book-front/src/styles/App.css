@@ -1,0 +1,37 @@
+/* src/styles/App.css */
+
+.App {
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 0 30px;
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0;
+  cursor: default;
+}
+
+.instagram-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.header-contact-button:hover {
+  color: black !important;
+}
+
+.MuiIconButton-root {
+  transition: color 0.3s !important;
+}
+
+.MuiIconButton-root:hover {
+  background-color: transparent !important;
+}
